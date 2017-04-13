@@ -5,3 +5,4 @@ node_modules
 .sass-cache
 sass
 config.rb
+/doc
