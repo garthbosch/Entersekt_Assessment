@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Assessment Test Suite">
+    <test name="My To Do List Data Collection and Display - Automation Testing - Chrome" enabled="true">
+        <parameter name="url" value="http://localhost:8080/" />      
+        <parameter name="filename" value="My-ToDoList_CollectAndDisplayData_AutomationTesting" />
+        <parameter name="selectedBrowserType" value="chrome" /> <!-- use the following e.g. chrome, internet explorer, firefox, opera etc-->        
+		<parameter name="waitTimeout" value="30" /> <!-- Waiting for element before timing out-->
+		<parameter name="addTodoItem" value="Wash my car" /> <!-- This is the actual item that will be entered into the textbox; new item-->
+		<parameter name="updatedTodoItem" value="Clean my Rottweiler" /> <!-- This is the actual item that will be entered into the textbox; new value to update -->
+		<parameter name="xssVulnerabilityItem" value="&lt;script&gt;alert('You have been ATTACHED')&lt;/script&gt;" /> <!-- This is the actual item that will be entered into the textbox; xss vulnerality data -->
+		<groups>
+            <run>
+                <include name="init" />
+            </run>
+        </groups>
+        <classes>
+            <class name="com.entersekt.test_assess.tests.CollectAndDisplayData" />
+        </classes>
+    </test>
+</suite>

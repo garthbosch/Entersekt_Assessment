@@ -6,3 +6,9 @@ node_modules
 sass
 config.rb
 /doc
+/bin/
+/.classpath
+/.project
+/debug.log
+/test-output
+/logs
