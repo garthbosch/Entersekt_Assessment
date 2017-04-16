@@ -1,0 +1,39 @@
+<project>
+
+    <target name="clean">
+        <delete dir="build/classes"/>
+    </target>
+
+    <target name="compile" depends="clean">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="src" destdir="build/classes">
+            <classpath>
+                <fileset dir="lib">
+                    <include name="*.jar" />
+                </fileset>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="jar" depends="compile">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/entersektAssessment.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="com.entersekt.test_assess.tests.TestMyToDoList"/>
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="copy-dependencies">
+		<copy todir="lib">
+			<fileset dir="build/jar" includes="**/*.jar" excludes="**/*sources.jar, **/*javadoc.jar" />
+		</copy>
+	</target>
+    
+    <target name="run" depends="jar">
+        <java jar="build/jar/entersektAssessment.jar" fork="true"/>
+    </target>
+
+    <target name="all" depends="jar, copy-dependencies" />
+    
+</project>

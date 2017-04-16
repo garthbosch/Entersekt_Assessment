@@ -14,7 +14,7 @@ import com.entersekt.test_assess.utils.SeleniumWebDriverUtils;
  * @author Garth Bosch
  * @date 11 April 2017
  */
-public class CollectAndDisplayData extends AbstractBaseClass {
+public class TestMyToDoList extends AbstractBaseClass {
 
     public static Logger log = Logging.getLogger(true); // set the logger
 
