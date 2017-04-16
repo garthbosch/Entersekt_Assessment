@@ -42,14 +42,12 @@ I've changed the Nodejs application a bit. I hope it is not problem.
 > - created a views folder which has the edit.ejs, index.ejs and layout.ejs files.
 > - added a mongodb; so list items are added, edited and deleted from the db.
 
-Setting up mongodb:
--------------------
+### Setting up mongodb
 1. Install mongodb from https://www.mongodb.com/download-center#community
 2. Create a folder C:\data\db
 3. Run mongodb as follows: <InstalledDirectory>\bin\mongod.exe
 
-Requirement 4:
---------------
+### Requirement 4
 1. List item needs to added to the list. To edit the item, you need to click on the list item type the new value and press enter.
 2. Test coverage has been created with the following setup:
 > ### Test Framework
